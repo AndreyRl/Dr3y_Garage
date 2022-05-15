@@ -1,0 +1,138 @@
+body {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    /* background: linear-gradient(180deg, #000000 80%, #ffffff 99%); */
+}
+
+.header-bar {
+    padding-bottom: 3vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #000000;
+    border-bottom: 3px solid #bf1922;
+    box-shadow: -3px 5px 6px 3px #2e2d2d;
+}
+
+.options-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    color: #ffffff;
+    margin-top: 0.5vh;
+    font-size: 1em;
+}
+
+.options-bar a {
+    text-decoration: none;
+    color: #ffffff;
+    transition-duration: 0.4s;
+}
+
+.options-bar ul li:hover {
+    text-shadow: 10px 3px 10px #ffffff;
+}
+
+header img {
+    width: 11vw;
+    margin-right: 20vw;
+}
+
+.box-login {
+    margin-left: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bf1922;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 2px solid #e6e6e6;
+
+    transition-duration: 0.4s;
+}
+
+.box-login:hover {
+    color: #bf1922;
+    border: 2px solid #bf1922;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px #e6e6e6 ;
+}
+
+.banner {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+.image-banner {
+    z-index: 0;
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/porsche.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 20vh;
+    padding-top: 10vh;
+}
+
+.text-banner {
+    margin-top: 10vh;
+    margin-left: 10vw;
+    font-size: 3.5em;
+    width: 40vw;
+    text-shadow: 0px 0px 45px #ffffff;
+    color: #ffffff;
+}
+
+
+/* CAROUSEL---------------------------- */
+.items-papper {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+
+#items {
+    display: flex;
+    width: 45%;
+    height: 60vh;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.item-1 {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/bmw.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    scroll-snap-align: start;
+}
+.item-2 {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/whell.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    scroll-snap-align: start;
+}
+.item-3 {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/oficina.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    scroll-snap-align: start;
+}
