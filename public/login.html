@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icon1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/login-cadastro.css">
+    <title>Dr3y_Garage | Login</title>
+</head>
+<body>
+    
+    <div class="full-screen-login">
+
+        <div class="container-full">
+
+            <div class="left-card-login">
+
+                <div class="cad">
+                    <h2>Login</h2>
+                </div>
+                
+                <div class="box-ipt">
+                    <div class="alerta_erro">
+                        <div class="card_erro" id="cardErro">
+                            <span id="mensagem_erro"></span>
+                        </div>
+                    </div>
+                    <div class="cont-box"><i class="uil uil-envelope-alt icon"></i>|<input id="email_input" placeholder="Email" type="text" name="" id=""></div>
+                    <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="senha_input" placeholder="Senha" type="password" name="" id=""></div>
+                </div>
+
+                    <span class="remenber">Lembre-se de mim <input type="checkbox" name="" id=""></span>
+
+                <button onclick="entrar()" class="btn-login"><a href="#"><i class="uil uil-signin"></i>Login</a></button>
+
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+
+                <span class="forget-password"><a href="#">Esqueceu sua senha ?</a></span>
+
+                <button class="btn-home"><a href="index.html"><i class="uil uil-home"></i>Home</a></button>
+
+            </div>
+
+            <div class="right-card-login">
+                <img src="assets/png_logo.png" alt="">
+                <h2>Bem vindo de volta!</h2>
+
+                <span>&nbsp;Entre com seu email e senha, para acessar sua conta!
+                    Caso não tenha, não se preocupe. Registre-se agora mesmo.</span>
+
+                    <div class="text-copy-login">Dr3y_Garage Copyright&copy; 2022</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+
+    function entrar() {
+        // aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

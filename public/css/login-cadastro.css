@@ -1,0 +1,326 @@
+html {
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(30deg, #000000 50%, #bf1922 99%);
+}
+.container-full {
+    display: flex;
+    margin-top: 4vh;
+    width: 80%;
+    height: 80vh;
+    border-radius: 20px 10px;
+}
+.left-card {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/Lamborghiniteste.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 0px 0px 20px;
+    z-index: 0;
+}
+.left-card img {
+    margin: 1vw;
+    width: 8vw;
+    z-index: 1;
+}
+.left-card h2 {
+    color: #000000;
+    font-size: 2em;
+    text-shadow: 10px 3px 10px #ffffff;
+    margin-left: 1vw;
+    z-index: 1;
+}
+.left-card span {
+    width: 30vw;
+    text-shadow: 10px 3px 50px #ffffff;
+    color: #000000;
+    font-size: 1.5em;
+    margin-left: 1vw;
+    font-weight: 500;
+}
+
+.go-login {
+    margin-top: 3vh;
+}
+
+.btn-login-cad {
+    background-color: #bf1922;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    width: 10vw;
+    height: 4vh;
+    cursor: pointer;
+    margin-left: 8vw;
+    margin-top: 4vh;
+    border-radius: 10px;
+
+    transition-duration: 0.4s;
+}
+.btn-login-cad a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-login-cad:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #bf1922;
+    text-shadow: 10px 3px 10px #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    width: 10vw;
+    height: 4vh;
+}
+
+.text-copy {
+    font-size: 0.5em;
+    margin-top: 4vh;
+    text-align: center;
+    font-weight: 900;
+}
+.text-copy-login {
+    font-size: 0.5em;
+    margin-top: 22vh;
+    text-align: center;
+    font-weight: 900;
+}
+.right-card { 
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #ffffff;
+}
+.cad {
+    border-bottom: 3px solid #bf1922;
+}
+.right-card h2 { 
+    font-size: 2em;
+    margin: 5vh;
+}
+.cont-box {
+    padding: 1vh;
+    margin-bottom: 2vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid #bf1922;
+    border-radius: 2px 0px 0px 2px;
+    background-color: #ffffff;
+}
+.icon {
+    margin-right: 1vw;
+    color: #bf1922;
+}
+.box-ipt {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    margin-top: 5vh;
+    margin-left: 4.5vw;
+}
+.box-ipt input {
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 1vw;
+    border: none;
+    width: 16vw;
+    height: 5vh;
+}
+.box-ipt input:focus {
+    outline: 0;
+}
+.box-ipt input:hover {
+    border-bottom: 1px solid #bf1922;
+}
+
+.btn-cadastrar {
+    background-color: #bf1922;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 15vw;
+    height: 5vh;
+    cursor: pointer;
+    margin-left: 8vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+
+    transition-duration: 0.4s;
+}
+.btn-cadastrar a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-cadastrar:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #bf1922;
+    text-shadow: 10px 3px 10px #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 15vw;
+    height: 5vh;
+}
+
+.btn-home {
+    background-color: #000000;
+    border: 2px solid #bf1922;
+    text-decoration: none;
+    font-size: 1em;
+    width: 8vw;
+    height: 4vh;
+    cursor: pointer;
+    margin-left: 11.5vw;
+    margin-top: 6vh;
+    border-radius: 10px;
+
+    transition-duration: 0.4s;
+}
+.btn-home a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-home:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #bf1922;
+    text-shadow: 10px 3px 10px #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    width: 8vw;
+    height: 4vh;
+}
+/* LOGIN----------------------------------- */
+
+.full-screen-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(30deg, #bf1922 1%, #000000 50%);
+}
+
+.left-card-login {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #ffffff;
+}
+
+.forget-password {
+    font-size: 0.7em;
+    margin-top: 2vh;
+    margin-left: 11vw;
+}
+
+.right-card-login {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/mustang.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 0;
+}
+
+
+.left-card-login h2 {
+    font-size: 2em;
+    margin-left: 5vw;
+}
+
+.btn-login {
+    background-color: #bf1922;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 15vw;
+    height: 6vh;
+    cursor: pointer;
+    margin-left: 8vw;
+    margin-top: 4vh;
+    border-radius: 10px;
+
+    transition-duration: 0.4s;
+}
+.btn-login a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-login:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #bf1922;
+    text-shadow: 10px 3px 10px #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 15vw;
+    height: 6vh;
+}
+
+.remenber {
+    margin-left: 5vw;
+    font-size: 0.8em;
+    color: #9c9c9c;
+}
+
+.right-card-login h2 {
+    font-size: 2em;
+    margin: 5vh;
+    text-shadow: 10px 3px 30px #ffffff;
+}
+.right-card-login img {
+    margin-left: 39vw;
+    width: 8vw;
+    z-index: 1;
+}
+
+.right-card-login span {
+    color: #000000;
+    text-shadow: 10px 3px 30px #ffffff;
+    margin-left: 2vw;
+    font-size: 1.5em;
+    width: 30vw;
+    font-weight: 500;
+}
+
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+}
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+}
