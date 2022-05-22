@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="css/login-cadastro.css">
+    <script src="js/funcoes.js"></script>
     <title>Dr3y_Garage | Cadastro</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
                 
                 <div class="box-ipt">
                     <div class="cont-box"><i class="uil uil-align-center-alt icon"></i>|<input id="nome_input" placeholder="Nome-Sobrenome" type="text" name="" id=""></div>
-                    <div class="cont-box"><i class="uil uil-envelope-alt icon"></i>|<input id="email_input" placeholder="Email" type="email" name="" id=""></div>
+                    <div class="cont-box"><i class="uil uil-envelope-alt icon"></i>|<input id="email_input" placeholder="Email" type="text" name="" id=""></div>
                     <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="senha_input" placeholder="Senha" type="password" name="" id=""></div>
                     <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="confirmacao_senha_input" placeholder="Confirme sua Senha" type="password" name="" id=""></div>
                 </div>
@@ -54,7 +55,7 @@
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img src="../public/assets/circle-loading.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login">
@@ -71,7 +72,7 @@
 
 <script>
     function cadastrar() {
-        // aguardar();
+        aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -84,7 +85,7 @@
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            // finalizarAguardar();
+            finalizarAguardar();
             return false;
         }
         else {
@@ -118,13 +119,13 @@
                 }, "2000")
                 
                 limparFormulario();
-                // finalizarAguardar();
+                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            // finalizarAguardar();
+            finalizarAguardar();
         });
 
         return false;

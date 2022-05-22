@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="css/login-cadastro.css">
+    <script src="js/funcoes.js"></script>
     <title>Dr3y_Garage | Login</title>
 </head>
 <body>
@@ -128,7 +129,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
+                    finalizarAguardar(texto);
                 });
             }
 
