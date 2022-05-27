@@ -38,7 +38,7 @@
 
                     <span class="remenber">Lembre-se de mim <input type="checkbox" name="" id=""></span>
 
-                <button onclick="entrar()" class="btn-login"><a href="#"><i class="uil uil-signin"></i>Login</a></button>
+                    <a href="#"><button onclick="entrar()" class="btn-login"><i class="uil uil-signin"></i>Login</button></a>
 
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -50,7 +50,7 @@
 
                 <span class="forget-password"><a href="#">Esqueceu sua senha ?</a></span>
 
-                <button class="btn-home"><a href="index.html"><i class="uil uil-home"></i>Home</a></button>
+                <a href="index.html"><button class="btn-home"><i class="uil uil-home"></i>Home</button></a>
 
             </div>
 
@@ -60,6 +60,8 @@
 
                 <span>&nbsp;Entre com seu email e senha, para acessar sua conta!
                     Caso não tenha, não se preocupe. Registre-se agora mesmo.</span>
+
+                    <a href="cadastro.html"><button class="btn-cad-login">Cadastre-se</button></a>
 
                     <div class="text-copy-login">Dr3y_Garage Copyright&copy; 2022</div>
 
@@ -76,15 +78,25 @@
 
 
     function entrar() {
-        // aguardar();
+        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            // finalizarAguardar();
+            mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            finalizarAguardar();
             return false;
         }
         else {

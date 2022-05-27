@@ -28,7 +28,7 @@
 
                       <span class="go-login">Caso já possua uma conta, entre agora mesmo.</span>
 
-                      <button class="btn-login-cad"><a href="login.html">Login</a></button>
+                      <a href="login.html" class="login_a"><button class="btn-login-cad">Login</button></a>
 
                       <div class="text-copy">Dr3y_Garage Copyright&copy; 2022</div>
             </div>
@@ -44,9 +44,9 @@
                     <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="confirmacao_senha_input" placeholder="Confirme sua Senha" type="password" name="" id=""></div>
                 </div>
 
-                <button onclick="cadastrar()" class="btn-cadastrar"><a href="#">Cadastrar</a></button>
+                <a href="#"><button onclick="cadastrar()" class="btn-cadastrar">Cadastrar</button></a>
 
-                <button class="btn-home"><a href="index.html"><i class="uil uil-home"></i>Home</a></button>
+                <a href="index.html"><button class="btn-home"><i class="uil uil-home"></i>Home</button></a>
 
                 <div class="alerta_erro">
                     <div class="card_erro" id="cardErro">
@@ -83,8 +83,28 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
 
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "As senhas inseridas devem ser iguais para prosseguir!";
             finalizarAguardar();
             return false;
         }
