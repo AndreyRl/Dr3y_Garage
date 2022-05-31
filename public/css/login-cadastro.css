@@ -98,7 +98,7 @@ body {
 
 .text-copy {
     font-size: 0.5em;
-    margin-top: 4vh;
+    margin-top: 8.5vh;
     text-align: center;
     font-weight: 900;
 }
@@ -265,7 +265,7 @@ body {
 .forget-password {
     font-size: 0.7em;
     margin-top: 2vh;
-    margin-left: 11vw;
+    margin-left: 10.25vw;
 }
 
 .right-card-login {
