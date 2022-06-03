@@ -1,74 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../assets/icon1.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&family=Poppins&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="../dashboard/css/curiosidades.css">
-        <title>Dr3y_Garage | Curiosidades</title>
-    
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../dashboard/css/curiosidades.css">
+    <title>Dr3y_Garage | Curiosidades</title>
+
+</head>
+
 <body>
-
-    <header class="header-bar" id="top-btn">
-
-
-
-        <div class="options-bar">
-            <ul>
-                <img src="../assets/png_logo.png">
-                <li class="dec-text"><a href=""> <i class="uil uil-home"></i> Home</a></li>
-                <li class="dec-text"><a href="">Minha História</a></li>
-                <li class="dec-text"><a href="cadastro.html">Cadastre-se</a></li>
-                <li>|</li>
-                <a href="login.html">
-                    <li>
-                        <div class="box-login">Login</div>
-                    </li>
-                </a>
+    <div class="blur">
+        <div class="box-text" id="box_int">
+            <button class="btn-close" onclick="close_card()">X</button>
+                <h2 id="title_text"></h2>
+                <span id="span_text"></span>
+            </div>
         </div>
 
-        </ul>
-        </div>
 
-    </header>
+        <header class="header-bar" id="top-btn">
 
-    <!-- FIM HEADER -->
 
-    <!-- INÍCIO FOOTER -->
-    <footer>
 
-        <div class="follow">
-            <h3 class="h3-follow">
-                Veja Também
-            </h3>
-            
-            <ul>
-                <li><a href="#">☛ Minha história</a></li>
-                <li><a href="#">☛ Curiosidades</a></li>
-                <li><a href="login.html">☛ Recomendações</a></li>
+            <div class="options-bar">
+                <ul>
+                    <img src="../assets/png_logo.png">
+                    <li class="dec-text"><a href="home_dash.html"> <i class="uil uil-home"></i>Home</a></li>
+                    <li><a href="metricas.html">Métricas</a></li>
+                    <li><a href="curiosidade.html"><b>Curiosidades</b></a></li>
+                    <li><a href="recomendacoes.html">Recomendações</a></li>
+                    <li>|</li>
+                    <a href="login.html">
+                        <li>
+                            <div class="box-login">Sair</div>
+                        </li>
+                    </a>
+            </div>
+
             </ul>
-            
-        </div>
-        <div class="copy">
-            <img src="../assets/png_letreiro.png" alt="">
-            <div class="text-copy">Dr3y_Garage Copyright&copy; 2022 / Todos os direitos reservados</div>
-        </div>
-        <div class="midia">
-            <div class="midia-social">
-                <a target="_blank" href="https://www.instagram.com/dr3y_garage/"><img class="icon" src="../assets/icon_insta.png" alt=""> <span>@dr3y_garage</span></a>
+
+
+        </header>
+
+        <!-- FIM HEADER -->
+
+        <!-- INICIO BANNER -->
+        <div class="banner">
+
+            <div class="image-banner">
+
+                <div class="text-banner">&nbsp; &nbsp;Curiosidades
+
+
+                </div>
+
             </div>
-            <div class="back-to-top">
-                <button><a href="#">Voltar ao topo</a></button>
+
+        </div>
+
+        <div class="items-papper">
+
+            <div class="card1 cont-0">
+                <div class="ft-banner ft-1"></div>
+                <div class="tx-banner">
+
+                    <h2>O mais amado no mundo</h2>
+                    <span> &nbsp; &nbsp;Conheça a história do carro
+                        mais adorado na face da terra...
+                    </span>
+
+                </div>
+                <button onclick="meuFuka()">Acessar</button>
+            </div>
+
+            <div class="card2 cont-0">
+                <div class="ft-banner ft-2"></div>
+                <div class="tx-banner">
+
+                    <h2>Futuro Automotivo?</h2>
+                    <span> &nbsp; &nbsp; Será que realmente os carros elétricos
+                        irão dominar as ruas ?
+                    </span>
+
+                </div>
+                <button onclick="carroEletrec()">Acessar</button>
+            </div>
+
+            <div class="card3 cont-0">
+                <div class="ft-banner ft-3"></div>
+                <div class="tx-banner"></div>
+                <div class="tx-banner">
+
+                    <h2>Funcionamento freio ABS</h2>
+                    <span> &nbsp; &nbsp;Entenda de uma forma simples o
+                        funcionamento de um freio ABS, e quais
+                        cuidados vocês deve ter.
+                    </span>
+
+                </div>
+                <button onclick="abs()">Acessar</button>
             </div>
         </div>
-    
-    </footer>    
+
+        <!-- FIM CARDS 1 -->
+
+        <!-- INICIO CARDS 2 -->
+
+        <div class="items-papper">
+
+            <div class="card1 cont-0">
+                <div class="ft-banner ft-4"></div>
+                <div class="tx-banner">
+
+                    <h2>Métricas do seu pneu</h2>
+                    <span> &nbsp; &nbsp;Entenda o significado das métricas do seu pneu.
+                    </span>
+
+                </div>
+                <button onclick="metriPneu()">Acessar</button>
+            </div>
+
+            <div class="card2 cont-0">
+                <div class="ft-banner ft-5"></div>
+                <div class="tx-banner"></div>
+                <div class="tx-banner">
+
+                    <h2>Carro mais caro do mundo</h2>
+                    <span> &nbsp; &nbsp;Conheça a joia mais valiosa do mundo.
+                    </span>
+
+                </div>
+                <button onclick="maisCaro()">Acessar</button>
+            </div>
+
+            <div class="card3 cont-0">
+                <div class="ft-banner ft-6"></div>
+                <div class="tx-banner">
+
+                    <h2>O mais rápido do mundo</h2>
+                    <span> &nbsp; &nbsp; Veja o portador do novo
+                        recorde mundial de velocidade.
+                    </span>
+
+                </div>
+                <button onclick="maisRapido()">Acessar</button>
+            </div>
+        </div>
+
+        <!-- INÍCIO FOOTER -->
+        <footer>
+
+            <div class="follow">
+                <h3 class="h3-follow">
+                    Veja Também
+                </h3>
+
+                <ul>
+                    <li><a href="metricas.html">☛ Métricas</a></li>
+                    <li><a href="curiosidade.html">☛ Curiosidades</a></li>
+                    <li><a href="recomendacoes.html">☛ Recomendações</a></li>
+                </ul>
+
+            </div>
+            <div class="copy">
+                <img src="../assets/png_letreiro.png" alt="">
+                <div class="text-copy">Dr3y_Garage Copyright&copy; 2022 / Todos os direitos reservados</div>
+            </div>
+            <div class="midia">
+                <div class="midia-social">
+                    <a target="_blank" href="https://www.instagram.com/dr3y_garage/"><img class="icon"
+                            src="../assets/icon_insta.png" alt=""> <span>@dr3y_garage</span></a>
+                </div>
+                <div class="back-to-top">
+                    <button><a href="#">Voltar ao topo</a></button>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
 </body>
+
 </html>
+
+<script>
+
+    function close_card() {
+        box_int.style.display = 'none'
+    }
+
+    function meuFuka() {
+        box_int.style.display = 'block'
+
+        title_text.innerHTML = `O carro mais amado no mundo`;
+        span_text.innerHTML = `A história do Fusca é longa, começando na Alemanha de antes da Segunda Guerra Mundial, mas ninguém imaginava que ele se tornaria um clássico atemporal.
+
+O design clássico arredondado e o motor boxer são velhos conhecidos do público brasileiro. A história do Fusca é longa e o carro rodou o mundo com inúmeros nomes. Os alemães chamam de Käfer, os norte-americanos de Beetle e os portugueses de Carocha.
+
+Volkswagen Fusca laranja eurolook história do Fusca
+É o modelo único mais produzido da história e conta com seus mais de 60 anos de produção marcados por 21 milhões de unidades. O modelo “teve filhos”, veículos que foram derivados da tecnologia do velho besouro. Entre eles, conhecidos dos consumidores tupiniquins, como Karmann Ghia, Variant e Kombi. No entanto, isso também inclui “crias” de outras marcas do Grupo Volkswagen, como os carros da linha Porsche.
+
+O clássico da Volkswagen tem tantos adeptos que os chineses criaram sua própria versão: o Ballet Cat, um veículo elétrico com o design similar. Mas afinal, qual é a história do carro que virou febre no mundo? Você vai descobrir nos próximos tópicos! Boa leitura!
+
+O “Carro do Povo”
+Fusca na linha de montagem anos 50 Alemanha
+A origem do Fusca é um tanto controversa. O projeto começou a ganhar vida ainda nos anos 1930, durante o regime hitlerista. Hitler estava focado em levar a Alemanha um nível de modernidade compatível com as grandes potências mundiais. Por exemplo, com a introdução de tecnologias como o rádio — chamado de “Receptor do Povo”, ou “Volksempgänger”. Nesse, era impossível sintonizar rádios estrangeiras.
+
+A mesma lógica se aplicou à geladeira, chamada de “Refrigerador do Povo”, ou “Volkskühlschrank”. Assim, o regime lançava várias tecnologias rebatizando com um nome que fazia sentido para manter sua política ufanista. O Carro do Povo (Volkswagen, o nome original do Fusca que também batizou a marca alemã) originalmente surgiu com esse pretexto.
+
+O país contava com uma sociedade pouco motorizada e com veículos acessíveis apenas à burguesia alemã. Por isso, Hitler encomendou o projeto ao projetista Ferdinand Porsche. A ideia era criar um carro acessível, barato e que cumprisse algumas exigências curiosas, a exemplo, a capacidade de levar uma metralhadora montada no capô.
+
+A interrupção da produção
+Para a construção do projeto, Porsche garantiu o respaldo do regime para a criação de uma fábrica moderna. A ideia era diminuir os custos de produção e o governo fundou a cidade que futuramente se chamaria Wolfsburg para esse propósito, servindo como espaço para acomodar os operários. É nela que o regime criou a primeira fábrica da Volkswagen e até hoje é onde fica sua sede.
+
+Ainda assim, o “Carro do Povo” teve dificuldade para atingir seu propósito. Isso porque a sociedade alemã era adepta da bicicleta e o automóvel era visto apenas como um lazer reservado à classe média e aos ricos. As primeiras unidades foram, em sua maioria, para as autoridades do alto escalão do regime hitlerista.
+
+Porém, os esforços de guerra alemães logo interromperam a produção e o Fusca tradicional foi substituído por uma versão militarizada. Similar ao jipe, o novo carro tinha o nome de “Kübelwagen”, ou “carro caixote”. No fim da guerra, a maior parte do maquinário da Volkswagen estava intacto e, a partir dele, a empresa alemã foi reconstruída.
+
+A história do Fusca tupiniquim
+Foi em um regime democrático que o Fusca deu as caras por aqui. Juscelino Kubitschek foi eleito presidente nos anos 1950 e assumiu na esteira do chamado “nacional-desenvolvimentismo” e do ambicioso plano de crescer “50 anos em 5”, incentivando a produção de automóveis com capital privado — normalmente, de origem estrangeira. Assim, as multinacionais se concentraram na região do ABC paulista.
+
+Em 1959, a Volkswagen lançou o primeiro Fusca com montagem no Brasil. JK aproveitou a fama de pai da indústria automobilística brasileira e desfilou a bordo do carro. A concorrência também viria de uma marca européia, a francesa Simca — que lançaria a linha de luxo Chambord na mesma época.
+
+Assim, o clássico da multinacional alemã foi evoluindo ao longo dos anos e se tornou um dos carros mais vendidos do Brasil. Nos anos 1970, por exemplo, ganhou cinto de segurança e começou a passar por testes de impacto. A produção foi interrompida nos anos 1980, já que o carro era considerado obsoleto e a linha de montagem da filial de São Bernardo do Campo precisava ser atualizada.
+
+A hora de dar “tchau”
+Essa ainda não foi a despedida do Fusca. Nos anos 1990, o então presidente Itamar Franco fez uma parceria com a Volkswagen para a empresa voltar a produzir o carro. Assim, o pedido foi polêmico, já que não levava em conta o avanço da indústria.
+
+1973 Volkswagen Beetle (Kafer, Bug) 1303 (Type 1), traseira
+Esse ficou conhecido popularmente como “Fusca Itamar”. O clássico ainda passou por atualizações tecnológicas, simbolizadas pelo New Beetle e pelo Fusca A5. A evolução tecnológica foi representativa: o modesto motor experimental do projeto original de Ferdinand Porsche é bem diferente da poderosa engenharia de 211 cv que mais de 60 anos depois foi entregue ao “novo Fusca”.
+
+No entanto, apesar das tentativas de adaptar o veículo aos dias de hoje, o clássico da multinacional alemã precisou dar “tchau” e a história do Fusca chegou ao fim. Isso aconteceu em 2019, com o último modelo sendo vendido aqui mesmo no Brasil. O “Final Edition” foi produzido no México e adquirido por um colecionador.`
+    }
+
+</script>
