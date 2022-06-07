@@ -224,6 +224,7 @@ body {
 }
 
 .card_erro {
+    position: fixed;
     display: none;
     background-color: #ffffff;
     color: black;
@@ -233,11 +234,27 @@ body {
     border: #bf1922 2px solid;
     padding: 5px;
     margin-left: 20%;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+    box-shadow: 0 1px 5px #666667;
+}
+
+.card_erro-login {
+    position: fixed;
+    display: none;
+    background-color: #ffffff;
+    color: black;
+    width: 15vw;
+    position: fixed;
+    border-radius: 5px;
+    border: #bf1922 2px solid;
+    padding: 5px;
+    margin-left: 1%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     box-shadow: 0 1px 5px #666667;
 }
   
-.card_erro #mensagem_erro{
+.card_erro-login #mensagem_erro{
     font-weight: 800px;
     font-size: 1em;
 }

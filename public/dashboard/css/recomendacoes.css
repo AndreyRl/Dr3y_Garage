@@ -10,6 +10,84 @@ body {
     background: linear-gradient(180deg, #d3d3d3 80%, #535353 99%);
 }
 
+.container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    width: 80%;
+    height: 90vh;
+    position: fixed;
+    display: none;
+}
+
+.box-text {
+    width: 80%;
+    height: 80vh;
+    border: 4px inset #bf1922;
+    background-color: #e6e6e6;
+    overflow: auto;
+    margin-left: 5%;
+    box-shadow: 0px 0px 50px 50px;
+    padding: 0px 50px 30px 50px;
+}
+
+.div-btn {
+    height: 3vh;
+    width: 2vw;
+    margin-bottom: 3vh;
+    margin-left: 90%;
+}
+
+.btn-close {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 900;
+    position: absolute;
+    background-color: transparent;
+    transition: 0.5s;
+    color: #ffffff;
+    text-shadow: 0px 0px 6px #000000;
+}
+
+.like {
+    cursor: pointer;
+    z-index: 2;
+    margin-top: -8vh;
+    margin-left: 55vw;
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    border: 2px solid #ffffff;
+    background-color: #bf1922;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;
+
+    transition: 0.2s;
+}
+
+.like:active {
+    border: 2px solid #bf1922;
+    background-color: #ffffff;
+}
+
+.btn-like {
+    width: 25px;
+    margin-right: 0.5vw;
+}
+
+.btn-close:hover {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #bf1922;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+
 .header-bar {
     padding-bottom: 3vh;
     left: 0;

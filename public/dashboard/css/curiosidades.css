@@ -10,43 +10,57 @@ body {
     background: linear-gradient(180deg, #d3d3d3 80%, #535353 99%);
 }
 
-.blur {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    width: 80%;
+    height: 90vh;
+    position: fixed;
+    display: none;
 }
 
 .box-text {
-    z-index: 2;
-    position: absolute;
     width: 80%;
     height: 80vh;
-    margin-top: 10vh;
-    margin-left: 6%;
     border: 4px inset #bf1922;
     background-color: #e6e6e6;
-    box-shadow: 0px 0px 50px 50px;
-    display: none;
     overflow: auto;
+    margin-left: 5%;
+    box-shadow: 0px 0px 50px 50px;
     padding: 0px 50px 30px 50px;
+}
+
+.div-btn {
+    height: 3vh;
+    width: 2vw;
+    margin-bottom: 3vh;
+    margin-left: 90%;
 }
 
 .btn-close {
     border: none;
     outline: 0;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 900;
-    margin-left: 100%;
+    position: absolute;
     background-color: transparent;
     transition: 0.5s;
+    color: #ffffff;
+    text-shadow: 0px 0px 6px #000000;
 }
 
 .btn-close:hover {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 900;
     color: #bf1922;
-    text-shadow: 0px 0px 6px #3f3f3f;
+    text-shadow: 0px 0px 6px #ffffff;
 }
 
 /* INICIO HEADER */
@@ -138,6 +152,33 @@ header img {
     color: #ffffff;
 }
 
+.like {
+    cursor: pointer;
+    z-index: 2;
+    margin-top: -8vh;
+    margin-left: 55vw;
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    border: 2px solid #ffffff;
+    background-color: #bf1922;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;
+
+    transition: 0.4s;
+}
+
+.like:active {
+    border: 2px solid #bf1922;
+    background-color: #ffffff;
+}
+
+.btn-like {
+    width: 25px;
+    margin-right: 0.5vw;
+}
+
 .items-papper {
     margin-top: 10vh;
     display: flex;
@@ -155,10 +196,6 @@ header img {
     box-shadow: 5px 5px 6px 3px #2e2d2d;
     border-radius: 30px;
     border: 3px solid #ffffff;
-}
-
-.card1:hover {
-    
 }
 
 .card2 {

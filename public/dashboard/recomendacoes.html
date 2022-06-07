@@ -16,6 +16,17 @@
     </head>
 <body>
 
+    <div class="container-text fade" id="container_text">
+        <div class="div-btn" id="modal">
+            <button class="btn-close" onclick="close_card()">X</button>
+        </div>
+        <div class="box-text" id="box_int">
+
+            <h2 id="title_text"></h2><button id="like" class="like"><img class="btn-like" src="image/gostar.png" alt="">Like</button>
+            <span id="span_text"></span>
+        </div>
+    </div>
+
     <header class="header-bar" id="top-btn">
 
 
@@ -70,7 +81,7 @@
             </span>
             
         </div>
-        <a href="recomendacoes.html"><button>Acessar</button></a>
+        <button onclick="cuide()">Acessar</button>
     </div>
 
     <div class="card2 cont-0">
@@ -83,7 +94,7 @@
             </span>
             
         </div>
-        <a href="recomendacoes.html"><button>Acessar</button></a>
+        <button onclick="oleo()">Acessar</button>
     </div>
 
     <div class="card3 cont-0">
@@ -96,7 +107,7 @@
             </span>
             
         </div>
-        <a href="recomendacoes.html"><button>Acessar</button></a>
+        <button onclick="pintura()">Acessar</button>
     </div>
 </div>
 
@@ -114,7 +125,7 @@
             </span>
             
         </div>
-        <a href="recomendacoes.html"><button>Acessar</button></a>
+        <button onclick="combustivel()">Acessar</button>
     </div>
 
     <div class="card2 cont-0">
@@ -127,20 +138,20 @@
             </span>
             
         </div>
-        <a href="recomendacoes.html"><button>Acessar</button></a>
+        <button onclick="pneu()">Acessar</button>
     </div>
 
     <div class="card3 cont-0">
         <div class="ft-banner ft-6"></div>
         <div class="tx-banner">
 
-            <h2>Sinto de segurança...</h2>
+            <h2>cinto de segurança...</h2>
             <span> &nbsp; &nbsp;Infelizmente é rejeitado por muitos, mas é
                                 um item que pode mudar o rumo de toda a história.
             </span>
             
         </div>
-        <a href="curiosidade.html"><button>Acessar</button></a>
+        <button onclick="cinto()">Acessar</button>
     </div>
 </div>
 
@@ -148,9 +159,9 @@
     <footer>
 
         <div class="follow">
-            <h3 class="h3-follow">
+            <h2 class="h3-follow">
                 Veja Também
-            </h3>
+            </h2>
             
             <ul>
                 <li><a href="metricas.html">☛ Métricas</a></li>
@@ -175,3 +186,223 @@
     </footer>    
 </body>
 </html>
+
+<script>
+
+document.addEventListener("mousedown",function(e) {
+    if (e.button === 1) {
+        return false;
+    }
+
+    console.log('ativou')
+});
+
+function close_card() {
+        container_text.style.display = 'none'
+    }
+
+    function cuide() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `<b>6 Dicas de limpeza automotiva</b>`;
+        span_text.innerHTML = `<p>Nem sempre dá para levar um carro num lava-rápido ou mesmo existe algum próximo de casa. Porém, dá para fazer a limpeza do carro na própria residência e de uma forma fácil, que qualquer pessoa pode executar sem problemas. Para unir esforço braçal no serviço, local adequado e kit de limpeza, listamos 10 dicas para se fazer uma limpeza automotiva sem necessidade de equipamentos ou conhecimento específicos, que pessoas leigas podem executar em suas residências ou locais onde estão passando um tempo.</p>
+
+<p>Apesar de alguns dos pontos serem fáceis de fazer, o tempo para se executar tudo será longo se for feito apenas por uma pessoa. Então, não pense que poderá dar um trato no carro em tempo semelhante ao de um lava-rápido. O negócio é curtir o processo e deixar o carro do jeito que ele precisa ficar.</p>
+
+<h3><b>Exterior</b></h3>
+
+<p><b>1) Local </b></p>
+
+<P>Uma das primeiras coisas que se deve fazer é ter um local com sombra ou cobertura para executar parte do serviço. Um abrigo do sol é importante para que ao ensaboar o veículo, o produto não irá secar rapidamente e assim manchar a pintura.<br>
+
+Além disso, deve-se deixar o carro nesse espaço por algum tempo, a fim de que a lataria esfrie, o que ajuda na hora da limpeza ao evitar o mesmo problema. Também é um local onde ao encerar, se evite a evaporação e o ressecamento da cera.<br>
+
+Sob sol forte, quem está executando um serviço braçal como o de limpar o exterior do carro, acabará tendo uma insolação. Então, o melhor é se prevenir de eventuais problemas com a saúde também.</p>
+
+
+<p><b>2) Kit de limpeza automotiva</b></p>
+<p>Um ponto importante na hora de limpar o carro é ter um kit de limpeza automotiva, que pode ser facilmente encontrado em lojas especializadas ou mesmo supermercados. Geralmente, um kit de limpeza comum vem com shampoo específico para limpar os pneus, geralmente de 500 ml. Além dele, vem também um shampoo para lavagem da carroceria e partes plásticas exteriores. Este também vem em embalagem de 500 ml. Outro é a cera para polimento com mais ou menos 200 ml.<br>
+
+O kit de limpeza tradicional ainda traz um produto de limpeza a base de silicone, geralmente com 100 ml. Há também uma esponja e uma flanela. Basicamente é isso, seis produtos em uma embalagem única. Porém, pode-se adquirir mais outros produtos para deixar a limpeza mais completa e eficaz. Um deles é uma luva de lavagem automotiva, que é mais macia é própria para este fim.<br>
+
+Nesse caso, pode-se adquirir também limpa vidros, tanto o produto específico para se aplicar nos vidros do carro de forma direta, como o outro que é misturado com a água do reservatório. Assim, durante a lavagem automática do limpador, o produto terá eficiência ampliada e proverá melhor proteção contra o embaçamento ou sujeira, que pode ser poeira ou óleo. Existe ainda o kit de limpeza a seco, mas você pode conferir aqui como realizar esse outro tipo de serviço.</p>
+
+<p><b>3) Encerando</b></p>
+<p>Essa é uma parte importante da limpeza automotiva. Encerar o carro é deixa-lo brilhando para uma estética realmente aceitável e para se evitar mais sujeira por um tempo maior, já que água e outros materiais demoram mais a se fixar após a aplicação de cera. Ela serve também para proteger a pintura contra a ação do tempo e do sol, além de retirar alguns riscos leves. Para executar esse serviço, o local precisa ser sombreado ou coberto, protegido da luz solar.<br>
+
+Após consideração das instruções do produto, aplique-o sobre a superfície da carroceria utilizando uma esponja macia e suave, sem material abrasivo. Use movimentos circulares para isso e de forma suave. Após a aplicação, geralmente após um ou dois minutos, já se pode começar a polir. Para isto, use um pano de microfibra e faça movimentos circulares de forma suave.<br>
+
+Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplicação é com um pano 100% de algodão ou microfibra, o mesmo tipo que se usa para encerar. A camada de cera precisa ser fina o suficiente para não apresentar resistência ao movimento. Se for muito grossa a cera, retarde em vários minutos a aplicação do pano para encerar. A cera em spray pode ser usada, mas não remove riscos. Precisa-se dar brilho com um pano de microfibra também. Feito tudo isso, é hora de passar para dentro.</p>
+
+
+<h3><b>Interior</b></h3>
+
+<p><b>4) Aspiração</b></p>
+<p>Por dentro, a limpeza começa com a aspiração da sujeira. Há diversos equipamentos no mercado, cujos preços podem começar na casa dos R$ 70, mas existe alguns até mais baratos. No trabalho, aspire tapetes, carpetes, bancos, porta-objetos, porta-malas e cantos do habitáculo.</p>
+
+<p><b>5) Painel, portas e revestimentos plásticos</b></p>
+<p>Lembra do silicone do kit de limpeza automotiva? Esqueça-o. Ele pode ressecar partes plásticas e ainda criar um ambiente atrativo para atrair mais sujeira, sem contar a evaporação, que provoca o engorduramento do para-brisa, um potencial embaçante. Leia nossa recomendação sobre o assunto. Para a limpeza dessas partes, use um pano macio e levemente umedecido para retirar sujeira e manter a aparência natural.</p>
+
+<p><b>6) Estofamento</b></p>
+<p>Os bancos também precisam ser limpos e para isso use também um pano macio e levemente umedecido. No caso de bancos em couro, além disso, utilize um produto específico para manter a integridade e a durabilidade do material, mantendo sua hidratação. O mesmo deve ser feito no volante, alavanca e portas, se os mesmos forem revestidos com esse material.</p>
+<p>No mercado, os produtos desse tipo custam entre R$ 10 e R$ 50, geralmente. Nunca use silicone em bancos de couro, além de deixar o revestimento com aparência artificial, também o deixa tão liso que numa freada mais forte, o corpo irá escorregar sobre o assento. Quem tem moto sabe muito bem do que estamos falando.</p>`
+    }
+
+
+    function oleo() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `<b>Qual a importância da troca de óleo?</b>`;
+        span_text.innerHTML = `<p>&nbsp;&nbsp;Trocar o óleo com frequência é fundamental para o bom funcionamento de qualquer veículo, seja ele moto, carro ou caminhão. O óleo é responsável pela lubrificação e proteção das partes móveis, reduzindo o atrito e evitando o desgaste das peças do motor antes do tempo.</p>
+
+            <p>&nbsp;&nbsp;Além de prevenir o desgaste, o óleo também cumpre um papel importante de controlar o calor gerado pelo motor, sem que este passe para os demais sistemas. Com tantas funções, é fundamental que o motorista tenha total cuidado e faça a troca do óleo respeitando a frequência indicada. Evite gastos extras com a manutenção do seu veículo, confira a importância da troca do óleo, como realizar a troca e dicas de conservação.</p>
+
+
+                <p><b>De olho na qualidade do desempenho</b></p>
+<p>&nbsp;&nbsp;Trocar o óleo é garantia de um bom desempenho de todo o sistema automotivo. Isso porque o óleo passa por diversas peças durante seu uso, e com o tempo pode adquirir componentes que comprometem diretamente a qualidade necessária para um bom funcionamento do motor.</p>
+
+    <p>&nbsp;&nbsp;Com o tempo, o nível do óleo diminui por ser consumido; mas além disso, ele é contaminado por subprodutos gerados pela queima do combustível – o que faz com que o óleo perca suas propriedades de lubrificação. Assim, o óleo se torna mais ácido e pode causar a corrosão do sistema, o que comprova a importância da troca de óleo.</p>
+
+        <p><b>Como fazer a manutenção do óleo</b></p>
+            <p>&nbsp;&nbsp;A troca do óleo é recomendada de acordo com o total de quilômetros rodados, mas estar de olho na qualidade e níveis do óleo auxiliam na prevenção de danos no carro. Para checar os níveis, é preciso aguardar ao menos cinco minutos após o desligamento do motor, e utilizar a vareta do motor – verificando se o óleo está entre os dois marcadores (máximo e mínimo). O nível correto é exatamente no meio entre eles: muito baixo, haverá a falta de lubrificação; muito alto, o óleo pode vazar e danificar peças.</p>
+
+<p>&nbsp;&nbsp;O tipo do óleo é sempre indicado pelo fabricante, bem como a quilometragem adequada para a troca total. Outro ponto importante é trocar o filtro junto com o óleo, ou a cada duas trocas. Assim, você evita que impurezas cheguem ao motor. Sem a devida atenção ao filtro, ele pode acabar dificultando a passagem do óleo, por conta da quantidade de sujeira contida nele, causando falhas na lubrificação.</p>
+
+    <p><b>Onde fazer a troca de óleo</b></p>
+<p>&nbsp;&nbsp;Se o seu veículo já chegou à quilometragem recomendada para realizar a troca do óleo, a melhor forma de fazer a manutenção é contar com uma empresa especializada no assunto. Assim, você terá a garantia de que o serviço será bem realizado.</p>`
+    }
+    function pintura() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `<b>5 Dicas práticas para preservar a pintura automotiva</b>`;
+        span_text.innerHTML = `<p>&nbsp;&nbsp;Você vai à concessionária, leva o carro para casa e, a partir daí, nada de estresse ou preocupação. Você passeia muito, economiza tempo no dia a dia e, à noite, até esquece que deixou o veículo na garagem. Esse seria um bom conto de fadas, não concorda? Mas a verdade é que um veículo requer muitos cuidados com a manutenção, sendo que a pintura automotiva surge como um dos primeiros itens da lista.</p>
+
+        <p>&nbsp;&nbsp;Na prática, a lataria é um dos componentes que mais sofrem com os efeitos do tempo e dos agentes corrosivos do ambiente. E o pior é que, por ser o elemento que mais chama a atenção no automóvel, uma pintura em mau estado é um aspecto que reduz (e muito) o valor de revenda na hora da avaliação do carro.</p>
+
+        <p>&nbsp;&nbsp;Variações na cor, desbotamentos e riscos podem acabar com a estética do veículo. E os possíveis responsáveis por tudo isso são inúmeros, indo de sol e chuva a animais e até poeira! Por isso, preservar a pintura automotiva é uma missão bem engenhosa. Ir para a sombra das árvores ou fugir das folhas e dos pombos? Encerar sempre ou não? São questões repletas de detalhes, que vamos esclarecer a seguir!</p>
+
+
+
+        <b>1. Habitue-se a preservar a pintura automotiva</b></p>
+<p>&nbsp;&nbsp;Essa não é uma dica, mas sim um mandamento. Isso porque muitas das situações que podem danificar a lataria só são revertidas na hora. Do contrário, o desleixo pode transformar uma bobagem na necessidade de providenciar uma nova pintura.</p>
+
+<p>&nbsp;&nbsp;Uma dica para manter esse hábito é deixar um borrifador de água e um pano macio no carro. Dessa forma, assim que você bater o olho em uma sujeirinha, seja provocada por um passarinho ou pelo acúmulo de poeira, é só pegar o borrifador e limpar! Se você não fizer isso na hora, as chances de esquecer aumentam, fazendo com que a sujeira possa sim danificar a pintura.</p>
+
+<p>&nbsp;&nbsp;Além disso, se você viu uma folhinha, uma manchinha de barro ou até mesmo água na lataria, procure limpar na mesma hora. Pode parecer neurose, mas nada disso. Na verdade, essa é a melhor forma de evitar gastos devido a cuidados simples que não foram tomados.</p>
+
+<b>2. Lave o carro frequente e adequadamente</b></p>
+<p>&nbsp;&nbsp;Você já viu em algum desenho, filme ou seriado que a lavagem do carro normalmente é tratada como obrigação, quase um castigo? Em geral, um adolescente é forçado a fazer isso pelo pai. Aí, só para descontar, lava com uma bela má vontade. Na vida real, seria melhor que não lavasse! Vamos mudar essa perspectiva agora!</p>
+
+<p>&nbsp;&nbsp;Lavar o carro requer cuidado desde a escolha dos produtos, que devem ser neutros e com pH baixo. Além disso, existe a ideia de que quanto mais forte é o jato de água, mais ele limpa. No que diz respeito à pintura, essa ideia engana. Na realidade, quanto mais forte, maior o risco de causar danos. O correto é apostar na baixa pressão, lavando de cima para baixo, preferencialmente na sombra.</p>
+
+<b>3. Fuja do sol em excesso</b></p>
+<p>&nbsp;&nbsp;Sim, o sol dá cor ao mundo. Mas ele também tira o brilho, sabia? Se tem dúvidas a esse respeito, basta observar para ver como as cores se desbotam rapidamente ao ar livre. A boa notícia é que as pinturas automotivas não sofrem mais tanto desse mal, já que filtros UVA e UVB a protegem da radiação solar.</p>
+
+<p>&nbsp;&nbsp;Nem por isso, contudo, exagere na confiança. Saiba: exposição prolongada afeta a pintura, ainda mais quando o carro não está limpo! Mas correr para qualquer sombra de árvore também pode ser perigoso, já que galhos, folhas e as famigeradas fezes de pássaros não deixam por menos. Pese prós e contras, mantenha o carro limpo e observe!</p>
+
+<b>4. Invista na aplicação de uma boa cera</b></p>
+<p>&nbsp;&nbsp;O enceramento realmente protege a pintura do carro, pois cria uma película protetora que ajuda inclusive a bloquear os raios UVA e UVB da radiação solar. A cera pode ser sintética, produzida em laboratório, ou natural, feita a partir da Carnaúba, árvore originária do norte do Brasil.</p>
+
+<p>&nbsp;&nbsp;Há partidários para os 2 lados, que argumentam sobre qual das ceras é melhor. Em resumo, podemos dizer que a natural costuma ser usada para o brilho, enquanto a sintética tem uma duração maior. O importante é investir em boas ceras, pois as de baixa qualidade duram pouco e protegem irregularmente a superfície do carro.</p>
+
+<b>5. Encere sem exageros</b></p>
+<p>&nbsp;&nbsp;Em relação à proteção da pintura, portanto, o enceramento é essencial seja para manter a estética do veículo, valorizando a cor e realçando o brilho, seja para garantir proteção, diminuindo eventuais danos causados por agentes em geral — como pequenos atritos ou fezes de bichos. Porém, como o exagero nunca é bom, é preciso ter cuidado para não pesar a mão no enceramento.</p>
+
+<p>&nbsp;&nbsp;Alguns processos de enceramento envolvem polimento. Nesse caso, geralmente uma politriz (máquina de polir) é usada, criando um abrasamento (pequeno desgaste) no verniz da tinta. Se isso for feito com muita frequência, camadas da tinta serão danificadas. Por isso, tenha moderação!</p>`
+    }
+    function combustivel() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `<b>Conheça os riscos de abastecer o veículo com combustível de má qualidade</b>`;
+        span_text.innerHTML = `<p>&nbsp;&nbsp;O que é mais importante na hora de encher o tanque do seu veículo? Preço? Bandeira do posto? Atendimento e confiança no serviço oferecido? É provável que pelo menos uma dessas opções façam parte do universo de escolhas no momento de abastecer. Entretanto, um ponto fundamental que você deve ficar atento é com relação à qualidade do combustível. Mas, afinal, como é possível definir o que é um combustível de má qualidade? Quais seriam as suas características?</p>
+
+        <p>&nbsp;&nbsp;Consultor Master da BR Distribuidora, Antonio Alexandre Ferreira Correia explica que, de modo geral, é considerado combustível de má qualidade todo aquele que não atende às especificações definidas pela agência reguladora, no caso, a Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, a ANP. No Brasil, a adulteração de combustíveis como gasolina, etanol e diesel ocorre principalmente pela inclusão de solventes e metanol, ou da mistura de etanol em percentuais acima dos 27% determinados por lei.</p>
+
+        <p>&nbsp;&nbsp;Mas nem sempre um combustível de má qualidade diz respeito apenas a um produto que sofreu adulteração. “Em alguns casos, devido a más condições de manuseio e armazenagem, o combustível ficou fora da especificação autorizada”, completa Correia. Segundo a ANP, os combustíveis automotivos não têm um prazo de validade estabelecido, entretanto, a agência reguladora informa que a estabilidade do produto está diretamente ligada às formas de armazenamento: devem estar em condições brandas de temperatura e pressão e sem incidência de luz. No caso do diesel, a ANP recomenda que seja evitado o acúmulo de água para impedir a oxidação e o desenvolvimento de micro-organismos, que provocam a degradação do produto.</p>
+
+
+        <b>Prejuízos ao veículo</b></p>
+
+        <p>&nbsp;&nbsp;O consultor da BR cita alguns dos principais efeitos causados no veículo pela utilização de combustíveis de má qualidade, incluindo, entre eles, o aumento do consumo e de emissões, formação de depósitos no motor, contaminação do óleo lubrificante, degradação do sistema do catalisador do veículo, carbonização das velas de ignição e entupimento de bicos injetores. Além dos problemas técnicos, Correia alerta para outro fato importante: o consumo e comercialização de combustíveis adulterados podem trazer malefícios tanto para quem tem contato com esse tipo de produto, quanto para a sociedade em geral.</p>
+
+        <p>&nbsp;&nbsp;“Como a queima desse tipo de combustível não é correta, o veículo polui mais, aumentando os problemas de saúde. Vale lembrar que o contato de combustíveis com o corpo deve ser evitado, mesmo os produtos especificados. No caso dos adulterados, os problemas como irritação de pele e de olhos podem ser ainda mais graves”, frisa.</p>
+
+
+        <b>Como evitar comprar combustíveis de má qualidade?</b></p>
+
+<p>&nbsp;&nbsp;> Utilize sempre em postos de confiança, de preferência em bandeiras conhecidas;</p>
+
+<p>&nbsp;&nbsp;> Ao abastecer, exija a nota fiscal para comprovar a origem do abastecimento. Isso é imprescindível para possíveis denuncias em caso de irregularidade;</p>
+
+<p>&nbsp;&nbsp;> Desconfie de postos que têm preços muito abaixo daqueles praticados na região. Isso pode indicar algo anormal;</p>
+
+<p>&nbsp;&nbsp;> Se suspeitar que o seu veículo foi abastecido com combustível adulterado, entre em contato com os Procons estaduais.</p>`
+    }
+    function pneu() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `Quais são os princípios básicos?`;
+        span_text.innerHTML = `
+        <p>&nbsp;&nbsp;Não há como dizer com exatidão quanto tempo dura um pneu. A vida útil e a quilometragem de um pneu dependem de uma combinação de fatores: escultura, hábitos do motorista, clima, condições das vias e cuidados com os pneus.</p>
+
+        <b>Algumas sugestões importantes e dicas:</b></p>
+<p>&nbsp;&nbsp;<b>1</b> - Tenha em mente o período de cinco anos</p>
+A partir de cinco anos de uso, os pneus devem passar por uma inspeção profissional minuciosa ao menos uma vez por ano.</p>
+
+<p>&nbsp;&nbsp;<b>2</b> - Dez anos é o máximo</p>
+Se não houve reposição dos pneus 10 anos após a data de fabricação, a Michelin recomenda a troca por pneus novos como precaução, mesmo que pareçam estar em condições de uso e o indicador de desgaste da banda de rodagem não tenha sido atingido. Isso também se aplica aos estepes.</p>
+
+<p>&nbsp;&nbsp;<b>3</b>- A manutenção adequada aumenta a vida útil do pneu</p>
+<p>&nbsp;&nbsp;A devida atenção à calibragem dos pneus, desgaste da banda de rodagem, alinhamento, etc., pode prolongar sua vida útil. </p>
+
+<p>&nbsp;&nbsp;No caso de produtos originais: siga as recomendações de troca dos pneus do fabricante do veículo.</p>
+
+<b>Como verificar a data de fabricação</b></p>
+<p>&nbsp;&nbsp;Procure o número de identificação DOT no flanco do pneu.</p>`
+    }
+    function cinto() {
+        container_text.style.display = 'block'
+
+        title_text.innerHTML = `<b>O cinto de segurança salva vidas, use sempre</b>`;
+        span_text.innerHTML = `<p>&nbsp;&nbsp;Ocinto de segurança protege diariamente motoristas e passageiros de possíveis impactos violentos no interior do carro, ou mesmo o arremesso para fora do veículo, em caso de colisões. O item contribui para reduzir os riscos de ferimentos na cabeça, no rosto, no pescoço e na coluna dos ocupantes do veículo.</p>
+
+        <p>&nbsp;&nbsp;O primeiro cinto de segurança de que se tem registro foi datado em 1885 e tinha como função impedir que as pessoas caíssem das diligências durante as viagens. Mas foi apenas no início dos anos 50 que os cintos de segurança passaram a aparecer como item opcional para veículos automotivos.</p>
+
+        <p>&nbsp;&nbsp;No Brasil, o cinto é obrigatório em todos os automóveis colocados à venda desde 1968, mas só em 23 de setembro de 1997, o uso obrigatório do cinto de segurança para condutor e passageiros em todas as vias do território nacional foi sancionado por meio da Lei nº 9.503, o Código de Trânsito Brasileiro.</p>
+
+        <p>&nbsp;&nbsp;Mas, mesmo obrigatório há 23 anos, o uso de cinto de segurança ainda encontra a resistência dos brasileiros. Segundo a Pesquisa Nacional de Saúde (PNS), do IBGE, 20,6% da população declarou não usar cinto de segurança sempre que anda de carro ou de van nos bancos da frente. No Nordeste, 66% dos entrevistados disseram utilizar, já no Sudeste, o número sobe para 86,5%.</p>
+
+        <p>&nbsp;&nbsp;Porém, o hábito para quem viaja no banco de trás ainda não se consolidou. Apenas metade da população utiliza a proteção. E nas áreas rurais o índice registrado é de apenas 44,8%.</p>
+
+        <b>Funcionalidade</b></p>
+
+<p>&nbsp;&nbsp;O cinto de segurança é um dispositivo barato, simples de ser usado e capaz de salvar vidas em caso de acidentes. No caso de uma batida, um corpo solto em um automóvel mantém a mesma velocidade que estava até encontrar uma barreira. Ou seja, sem o cinto, em uma batida a 60 km/h, essa será a velocidade com que uma pessoa atinge o para-brisa.</p>
+
+<p>&nbsp;&nbsp;Segundo o Ministério da Saúde, mais da metade das pessoas não utilizam o cinto quando estão no banco traseiro. Os passageiros têm a falsa sensação de segurança que o banco traseiro proporciona, porque imaginam que estão protegidos pelos bancos dianteiros e que estão longe do para-brisa. Porém, isso não é verdade. A força que uma pessoa recebe em uma batida é algo em torno 35 vezes o seu peso. Com uma força tão grande, não há banco que possa pará-la. O resultado é o passageiro de trás esmagando a pessoa sentada à frente e se lesionando gravemente.</p>
+
+<p>&nbsp;&nbsp;Vale lembrar nem sempre o acidente é uma colisão frontal. No caso de batidas laterais e capotamentos, o cinto de segurança também protegerá todos os ocupantes de serem arremessados contra si, em direção a alguma parte do carro ou até mesmo para fora do veículo.</p>
+
+<b>Tipos de cintos de segurança</b></p>
+
+<p>&nbsp;&nbsp;Os cintos de segurança se diferem, basicamente, por quantos pontos ou extremidades estão conectados ao veículo.</p>
+
+<p>&nbsp;&nbsp;Cinto de segurança de 2 pontos: Esse é um dos primeiros cintos de segurança existentes. É o que está presente até hoje nas aeronaves comerciais, ônibus e em alguns bancos traseiros de carros. Difundiu-se nos anos 80 quando passou a aparecer na maioria dos carros populares. Sua principal característica é a proteção à cintura, impedindo que o corpo vá para frente em colisões ou frenagens bruscas.</p>
+
+<p>&nbsp;&nbsp;Cinto de segurança 3 pontos: O cinto de segurança de 3 pontos tem disposição em formato de Y e protege, além da cintura, os ombros, tórax e bacia. O cinto de segurança 3 pontos é o mais eficaz, pois o impacto é absorvido e distribuído por uma área maior do corpo humano.</p>
+
+<p>&nbsp;&nbsp;Jamais utilize qualquer artifício para aumentar a folga no cinto, como presilhas ou pregadores. O correto é utilizar o cinto por cima do ombro, logo abaixo do pescoço. Além de ajustar para que ele passe pelos quadris, não na barriga.</p>
+
+<p>&nbsp;&nbsp;Grávidas devem usar o cinto independentemente do tempo de gestação. O cuidado deve ser maior com a parte de baixo do cinto, que deve ficar sempre abaixo da barriga.</p>
+
+<b>O abraço que salva</b>
+
+<p>&nbsp;&nbsp;Em 2019, a Polícia Rodoviária Federal – PRF, registrou nas estradas federais do país, 7.921 acidentes com queda dos ocupantes do veículo. Deixando 2 mil pessoas feridas e 98 mortas.</p>
+
+<p>&nbsp;&nbsp;Números que poderiam ser evitados. O uso correto do cinto de segurança por todos os ocupantes do veículo pode reduzir em até 70% as mortes e lesões graves.</p>
+
+<p>&nbsp;&nbsp;Além do mais, a utilização do item, também pode evitar acidente. O cinto retém o corpo do motorista junto ao assento, o que permite manter o controle do veículo. Com o corpo solto no banco, o condutor perde facilmente a condição de dirigir.</p>
+
+<p>&nbsp;&nbsp;Então, vale ressaltar que, apesar dos avanços tecnológicos, o cinto de segurança de três pontos inventado há 61 anos, continua sendo o equipamento que mais salva vidas. Use-o, sempre, independente da distância do seu destino.</p>`
+    }
+
+</script>
