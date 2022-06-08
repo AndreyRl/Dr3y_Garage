@@ -12,23 +12,25 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="../dashboard/css/curiosidades.css">
+    <script src="../js/funcoes.js"></script>
     <title>Dr3y_Garage | Curiosidades</title>
 
 </head>
 
 <body>
-    
-        <div class="container-text fade" id="container_text">
-            <div class="div-btn">
-                <button class="btn-close" onclick="close_card()">X</button>
-            </div>
-            <div class="box-text" id="box_int">
 
-                <h2 id="title_text"></h2> <button id="like_btn" class="like"><img class="btn-like" src="image/gostar.png" alt="">Like</button>
-                <span id="span_text"></span>
-            </div>
+    <div class="container-text fade" id="container_text">
+        <div class="div-btn">
+            <button class="btn-close" onclick="close_card()">X</button>
         </div>
-    
+        <div class="box-text" id="box_int">
+
+            <h2 id="title_text"></h2> <button onclick="on_like()" id="like_btn" class="like"><img class="btn-like"
+                    src="image/gostar.png" alt="">Like</button>
+            <span id="span_text"></span>
+        </div>
+    </div>
+
 
 
     <header class="header-bar" id="top-btn">
@@ -159,7 +161,7 @@
             <button onclick="maisRapido()">Acessar</button>
         </div>
     </div>
-
+    <span id="span_text1"></span>
     <!-- INÍCIO FOOTER -->
     <footer>
 
@@ -198,11 +200,47 @@
 
 <script>
 
+    var vt_acesso = [];
+    var vt_like = [];
+
+    function passar() {
+
+        if (vt_acesso.length <= 6) {
+            for (var i = Number(1); i <= vt_acesso.length; i++) {
+
+console.log(vt_acesso)
+if (i == 6) {
+    alert('Parabéns você acessou todas as publicações')
+
+    
+} else if (i > 6) {
+    break;
+}
+}
+        }
+
+        
+    }
+
+
+    function on_like() {
+        vt_like.push(1)
+        console.log(vt_like)
+
+        alert("Fico feliz que gostou! :)")
+
+    }
+
     function close_card() {
         container_text.style.display = 'none'
     }
 
     function meuFuka() {
+
+
+
+        vt_acesso.push("O mais amado no mundo");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>O carro mais amado no mundo</b>`;
@@ -250,9 +288,14 @@
 Esse ficou conhecido popularmente como “Fusca Itamar”. O clássico ainda passou por atualizações tecnológicas, simbolizadas pelo New Beetle e pelo Fusca A5. A evolução tecnológica foi representativa: o modesto motor experimental do projeto original de Ferdinand Porsche é bem diferente da poderosa engenharia de 211 cv que mais de 60 anos depois foi entregue ao “novo Fusca”.</p>
 
 <p>&nbsp;No entanto, apesar das tentativas de adaptar o veículo aos dias de hoje, o clássico da multinacional alemã precisou dar “tchau” e a história do Fusca chegou ao fim. Isso aconteceu em 2019, com o último modelo sendo vendido aqui mesmo no Brasil. O “Final Edition” foi produzido no México e adquirido por um colecionador.</p>`
+
+        passar()
     }
 
     function carroEletrec() {
+
+        vt_acesso.push("Futuro Automotivo");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `Cenários 2025 mostram futuro do setor automotivo brasileiro`;
@@ -267,9 +310,14 @@ Esse ficou conhecido popularmente como “Fusca Itamar”. O clássico ainda pas
 <p>&nbsp;O estudo Automotive Brazil 2025 relaciona sete temas que deverão ser necessariamente levados em conta pelos formuladores de políticas e estratégias empresariais: evolução tecnológica, mudanças nos hábitos de consumo, configuração mutante do mercado com redução de produtos de entrada, tributação e pressão de preços, nível de utilização da indústria, regulação/legislação de emissões e segurança, transformação da rede de distribuição. “A maneira como cada um desses fatores será tratado vai definir de forma contundente o futuro da indústria. Levamos em conta essas variáveis para traçar ao menos três possibilidades de cenário para 2025”, explica o consultor.</p>
 
 <p>&nbsp;Cardamone irá expor e debater as conclusões do Automotive Brazil 2025 em uma sala especial do Workshop Planejamento Automotivo 2018, realizado por Automotive Business no próximo dia 22 de agosto no centro de eventos do Hotel Sheraton WTC. A Sala Cenários 2025, com apresentação de Paulo Cardamone e mediação do jornalista Pedro Kutney, acontece como evento paralelo das 14h30 às 15h40 em espaço reservado a uma pequena plateia previamente inscrita, com vagas limitadas.</p>`
+
+        passar()
     }
 
     function abs() {
+
+        vt_acesso.push("Funcionamento freio ABS");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `O que é e como funciona o freio ABS?`;
@@ -295,9 +343,14 @@ Esse ficou conhecido popularmente como “Fusca Itamar”. O clássico ainda pas
 <p>&nbsp;Além de evitar que as rodas travem, o sistema permite que o condutor mantenha o controle da direção para fazer manobras. Ou seja, é possível girar o volante e desviar de obstáculos enquanto o sistema atua para parar o carro, freando sem perder o controle.</p>
 
     <p>&nbsp;Outra vantagem é o menor tempo e a menor distância de frenagem - já que as rodas não travam, o carro não desliza ou derrapa por perder contato/atrito com o solo. E sua eficiência ocorre mesmo em pisos com baixa aderência com areia, grama ou asfalto molhado.</p>`
+
+        passar()
     }
 
     function metriPneu() {
+
+        vt_acesso.push("Métricas do seu pneu");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>Compre sem errar: entenda o que significam as medidas dos pneus!</b>`;
@@ -340,9 +393,14 @@ batente da porta do motorista;<br>
 interior da porta do porta-luvas;<br>
 tampa do tanque de combustível;<br>
 manual de instruções do veículo.<br>`
+
+        passar()
     }
 
     function maisCaro() {
+
+        vt_acesso.push("Carro mais caro do mundo");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>Feito sob encomenda, Rolls-Royce Boat Tail é o carro mais caro do mundo</b>`;
@@ -359,9 +417,14 @@ manual de instruções do veículo.<br>`
                     <p>&nbsp;A Rolls-Royce não lista detalhes sobre a motorização, mas podemos presumir que o famoso 6.7 V12 da marca está sob o capô. Esse motor produz 570 cv nos modelos Cullinan e Phantom, e até 608 cv nas versões Black Badge. Oficialmente, a marca não revela o preço do Boat Tail. No entanto, nos bastidores é dito que o valor supera com facilidade o Sweptail. Algumas mídias como a Autocar afirmam que o valor final é de cerca de 20 milhões de libras (R$ 148.138.000 milhões na conversão direta).</p>
 
                         <p>&nbsp;Ao todo, o projeto levou quatro anos para ser desenvolvido, o que significa que a empresa começou a construir o Boat Tail logo após o lançamento do Sweptail em 2017. "Ele nasceu de um desejo de comemorar o sucesso e criar um legado duradouro", diz o CEO Torsten Muller-Otvos. "Em sua realização, o Rolls-Royce Boat Tail foi um momento crucial na história de nossa marca e no cenário de luxo contemporâneo".</p>`
+
+        passar()
     }
 
     function maisRapido() {
+
+        vt_acesso.push("O mais rápido do mundo");
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>Carro mais rápido do mundo bate novo recorde; saiba qual foi a velocidade</b>`;
@@ -378,6 +441,8 @@ manual de instruções do veículo.<br>`
                     
                     
                     <p>&nbsp;O carro mais rápido do mundo está equipado com um motor V8 5.9 litros biturbo. Quando abastecido com metanol, ele pode produzir um potência máxima de 1.750 cv. A marca não divulgou os números oficiais de aceleração (0 a 100 km/h) e de velocidade máxima.</p>`
+
+        passar()
     }
 
 </script>

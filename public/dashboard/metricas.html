@@ -12,11 +12,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="../dashboard/css/metricas.css">
+    <script src="../js/funcoes.js"></script>
     <title>Dr3y_Garage | Métricas</title>
 
 </head>
 
-<body>
+<!-- <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;"> -->
+<body onload="usuario(), postagem()"  style="background-color: #161618;">
 
     <header class="header-bar" id="top-btn">
 
@@ -25,7 +27,7 @@
         <div class="options-bar">
             <ul>
                 <img src="../assets/png_logo.png">
-                <li class="dec-text"><a href=""> <i class="uil uil-home"></i>Home</a></li>
+                <li class="dec-text"><a href="home_dash.html"> <i class="uil uil-home"></i>Home</a></li>
                 <li><a href="recomendacoes.html"><b>Métricas</b></a></li>
                 <li><a href="curiosidade.html">Curiosidades</a></li>
                 <li><a href="recomendacoes.html">Recomendações</a></li>
@@ -51,11 +53,11 @@
         <div class="box-metricas">
             <div class="users h2-mt">
                 <h2>Quantidade de usuários cadastrados:</h2>
-                <div class="result">0</div>
+                <div  class="result"><b id="cont_usuario"></b></div>
             </div>
             <div class="access h2-mt">
                 <h2>Quantidade de acessos as publicações:</h2>
-                <div class="result">0</div>
+                <div class="result"><b id="cont_postagem">0</b></div>
             </div>
             <div class="likes h2-mt">
                 <h2>Quantidade de likes nas publicações:</h2>
@@ -98,3 +100,85 @@
     </footer>
 
 </body>
+
+<script>
+
+function usuario() {
+    fetch("/usuarios/usuario", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          /parametrizar as respostas do console/
+          console.log("Deu certo a contagem !!", resposta)
+          resposta.json().then(cont => {
+            console.log(cont);
+            console.log(JSON.stringify(cont[0].c));
+            var conteudo = document.getElementById("cont_usuario")
+            var usuario_cadastrados = cont[0].c;
+            conteudo.innerHTML = `${usuario_cadastrados}`;
+          })
+
+        } else {
+          console.log("Houve um erro ao tentar realizar a contagem!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
+
+  function postagem() {
+    fetch("usuarios/postagem", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          /parametrizar as respostas do console/
+          console.log("Deu certo a contagem !!", resposta)
+          resposta.json().then(cont => {
+            console.log(cont);
+            console.log(JSON.stringify(cont[0].c));
+            var conteudo = document.getElementById("cont_postagem")
+            var postagem_cadastrados = cont[0].c;
+            conteudo.innerHTML = `${postagem_cadastrados}`;
+          })
+
+        } else {
+          console.log("Houve um erro ao tentar realizar a contagem!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
+
+</script>

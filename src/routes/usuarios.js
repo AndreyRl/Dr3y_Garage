@@ -7,6 +7,14 @@ router.get("/", function (req, res) {
     usuarioController.testar(req, res);
 });
 
+router.post("/usuario", function (req, res) {
+    usuarioController.usuario(req, res);
+})
+
+router.post("/postagem", function (req, res) {
+    usuarioController.postagem(req, res);
+})
+
 router.get("/listar", function (req, res) {
     usuarioController.listar(req, res);
 });

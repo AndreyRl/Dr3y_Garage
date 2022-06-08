@@ -11,6 +11,7 @@
             rel="stylesheet">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link rel="stylesheet" href="../dashboard/css/recomendacoes.css">
+        <script src="../js/funcoes.js"></script>
         <title>Dr3y_Garage | Recomendações</title>
     
     </head>
@@ -22,7 +23,7 @@
         </div>
         <div class="box-text" id="box_int">
 
-            <h2 id="title_text"></h2><button id="like" class="like"><img class="btn-like" src="image/gostar.png" alt="">Like</button>
+            <h2 id="title_text"></h2><button onclick="on_like()" id="like" class="like"><img class="btn-like" src="image/gostar.png" alt="">Like</button>
             <span id="span_text"></span>
         </div>
     </div>
@@ -189,19 +190,27 @@
 
 <script>
 
-document.addEventListener("mousedown",function(e) {
-    if (e.button === 1) {
-        return false;
-    }
+    vt_acesso = [];
+    vt_like = [];
 
-    console.log('ativou')
-});
+
+    function on_like() {
+        vt_like.push(1)
+        console.log(vt_like)
+
+        alert("Fico feliz que gostou! :)")
+
+    }
 
 function close_card() {
         container_text.style.display = 'none'
     }
 
     function cuide() {
+
+        vt_acesso.push("Cuide do seu carro");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>6 Dicas de limpeza automotiva</b>`;
@@ -250,6 +259,10 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 
 
     function oleo() {
+
+        vt_acesso.push("Troca de óleo");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>Qual a importância da troca de óleo?</b>`;
@@ -272,6 +285,10 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p>&nbsp;&nbsp;Se o seu veículo já chegou à quilometragem recomendada para realizar a troca do óleo, a melhor forma de fazer a manutenção é contar com uma empresa especializada no assunto. Assim, você terá a garantia de que o serviço será bem realizado.</p>`
     }
     function pintura() {
+
+        vt_acesso.push("Pintura automotiva");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>5 Dicas práticas para preservar a pintura automotiva</b>`;
@@ -311,6 +328,10 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p>&nbsp;&nbsp;Alguns processos de enceramento envolvem polimento. Nesse caso, geralmente uma politriz (máquina de polir) é usada, criando um abrasamento (pequeno desgaste) no verniz da tinta. Se isso for feito com muita frequência, camadas da tinta serão danificadas. Por isso, tenha moderação!</p>`
     }
     function combustivel() {
+
+        vt_acesso.push("Combustível de confiança");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>Conheça os riscos de abastecer o veículo com combustível de má qualidade</b>`;
@@ -339,6 +360,10 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p>&nbsp;&nbsp;> Se suspeitar que o seu veículo foi abastecido com combustível adulterado, entre em contato com os Procons estaduais.</p>`
     }
     function pneu() {
+
+        vt_acesso.push("Troca de pneu");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `Quais são os princípios básicos?`;
@@ -361,6 +386,10 @@ Se não houve reposição dos pneus 10 anos após a data de fabricação, a Mich
 <p>&nbsp;&nbsp;Procure o número de identificação DOT no flanco do pneu.</p>`
     }
     function cinto() {
+
+        vt_acesso.push("cinto de segurança");
+        console.log(vt_acesso);
+
         container_text.style.display = 'block'
 
         title_text.innerHTML = `<b>O cinto de segurança salva vidas, use sempre</b>`;
