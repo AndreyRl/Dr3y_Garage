@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../assets/icon1.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&family=Poppins&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="../dashboard/css/recomendacoes.css">
-        <script src="../js/funcoes.js"></script>
-        <title>Dr3y_Garage | Recomendações</title>
-    
-    </head>
-<body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../dashboard/css/recomendacoes.css">
+    <script src="../js/funcoes.js"></script>
+    <title>Dr3y_Garage | Recomendações</title>
+
+</head>
+
+<body onload="usuario()">
 
     <div class="container-text fade" id="container_text">
         <div class="div-btn" id="modal">
@@ -23,7 +25,8 @@
         </div>
         <div class="box-text" id="box_int">
 
-            <h2 id="title_text"></h2><button onclick="on_like()" id="like" class="like"><img class="btn-like" src="image/gostar.png" alt="">Like</button>
+            <h2 id="title_text"></h2><button onclick="like()" id="like" class="like"><img class="btn-like"
+                    src="image/gostar.png" alt="">Like</button>
             <span id="span_text"></span>
         </div>
     </div>
@@ -42,7 +45,7 @@
                 <li>|</li>
                 <a href="login.html">
                     <li>
-                        <div class="box-login">Sair</div>
+                        <a href="../login.html"><div class="box-login">Sair</div></a>
                     </li>
                 </a>
         </div>
@@ -70,91 +73,93 @@
 
     <!-- INICIO CARDS 1 -->
 
-<div class="items-papper">
+    <div class="items-papper">
 
-    <div class="card1 cont-0">
-        <div class="ft-banner ft-1"></div>
-        <div class="tx-banner">
+        <div class="card1 cont-0">
+            <div class="ft-banner ft-1"></div>
+            <div class="tx-banner">
 
-            <h2>Cuide do seu carro</h2>
-            <span> &nbsp; &nbsp; Veja a lista dos melhores produtos de limpeza
-                                 e cuidados para o seu carro.
-            </span>
-            
+                <h2>Cuide do seu carro</h2>
+                <span> &nbsp; &nbsp; Veja a lista dos melhores produtos de limpeza
+                    e cuidados para o seu carro.
+                </span>
+
+            </div>
+            <button onclick="cuide()">Acessar</button>
         </div>
-        <button onclick="cuide()">Acessar</button>
+
+        <div class="card2 cont-0">
+            <div class="ft-banner ft-2"></div>
+            <div class="tx-banner"></div>
+            <div class="tx-banner">
+
+                <h2>Troca de óleo</h2>
+                <span> &nbsp; &nbsp;Saiba quando realizar a troca de
+                    óleo do seu veículo.
+                </span>
+
+            </div>
+            <button onclick="oleo()">Acessar</button>
+        </div>
+
+        <div class="card3 cont-0">
+            <div class="ft-banner ft-3"></div>
+            <div class="tx-banner">
+
+                <h2>Pintura automotiva</h2>
+                <span> &nbsp; &nbsp;Veja os principais cuidados para
+                    manter uma boa pintura em seu carro.
+                </span>
+
+            </div>
+            <button onclick="pintura()">Acessar</button>
+        </div>
     </div>
 
-    <div class="card2 cont-0">
-        <div class="ft-banner ft-2"></div>
-        <div class="tx-banner"></div><div class="tx-banner">
+    <!-- INICIO CARDS 2 -->
 
-            <h2>Troca de óleo</h2>
-            <span> &nbsp; &nbsp;Saiba quando realizar a troca de 
-                                óleo do seu veículo.  
-            </span>
-            
+    <div class="items-papper">
+
+        <div class="card1 cont-0">
+            <div class="ft-banner ft-4"></div>
+            <div class="tx-banner">
+
+                <h2>Combustível de confiança?</h2>
+                <span> &nbsp; &nbsp;Entenda os malefícios de um
+                    combustível de baixa qualidade.
+                </span>
+
+            </div>
+            <button onclick="combustivel()">Acessar</button>
         </div>
-        <button onclick="oleo()">Acessar</button>
-    </div>
 
-    <div class="card3 cont-0">
-        <div class="ft-banner ft-3"></div>
-        <div class="tx-banner">
+        <div class="card2 cont-0">
+            <div class="ft-banner ft-5"></div>
+            <div class="tx-banner"></div>
+            <div class="tx-banner">
 
-            <h2>Pintura automotiva</h2>
-            <span> &nbsp; &nbsp;Veja os principais cuidados para 
-                                manter uma boa pintura em seu carro.
-            </span>
-            
+                <h2>Troca de pneu</h2>
+                <span> &nbsp; &nbsp;A importância de se preocupar com o estado
+                    dos seus pneus, pode salvar sua vida.
+                </span>
+
+            </div>
+            <button onclick="pneu()">Acessar</button>
         </div>
-        <button onclick="pintura()">Acessar</button>
-    </div>
-</div>
 
-<!-- INICIO CARDS 2 -->
+        <div class="card3 cont-0">
+            <div class="ft-banner ft-6"></div>
+            <div class="tx-banner">
 
-<div class="items-papper">
+                <h2>cinto de segurança...</h2>
+                <span> &nbsp; &nbsp;Infelizmente é rejeitado por muitos, mas é
+                    um item que pode mudar o rumo de toda a história.
+                </span>
 
-    <div class="card1 cont-0">
-        <div class="ft-banner ft-4"></div>
-        <div class="tx-banner">
-
-            <h2>Combustível de confiança?</h2>
-            <span> &nbsp; &nbsp;Entenda os malefícios de um
-                                combustível de baixa qualidade. 
-            </span>
-            
+            </div>
+            <button onclick="cinto()">Acessar</button>
         </div>
-        <button onclick="combustivel()">Acessar</button>
     </div>
-
-    <div class="card2 cont-0">
-        <div class="ft-banner ft-5"></div>
-        <div class="tx-banner"></div><div class="tx-banner">
-
-            <h2>Troca de pneu</h2>
-            <span> &nbsp; &nbsp;A importância de se preocupar com o estado
-                                dos seus pneus, pode salvar sua vida.  
-            </span>
-            
-        </div>
-        <button onclick="pneu()">Acessar</button>
-    </div>
-
-    <div class="card3 cont-0">
-        <div class="ft-banner ft-6"></div>
-        <div class="tx-banner">
-
-            <h2>cinto de segurança...</h2>
-            <span> &nbsp; &nbsp;Infelizmente é rejeitado por muitos, mas é
-                                um item que pode mudar o rumo de toda a história.
-            </span>
-            
-        </div>
-        <button onclick="cinto()">Acessar</button>
-    </div>
-</div>
 
     <!-- INÍCIO FOOTER -->
     <footer>
@@ -163,13 +168,13 @@
             <h2 class="h3-follow">
                 Veja Também
             </h2>
-            
+
             <ul>
                 <li><a href="metricas.html">☛ Métricas</a></li>
                 <li><a href="curiosidade.html">☛ curiosidades</a></li>
                 <li><a href="recomendacoes.html">☛ Recomendações</a></li>
             </ul>
-            
+
         </div>
         <div class="copy">
             <img src="../assets/png_letreiro.png" alt="">
@@ -177,15 +182,17 @@
         </div>
         <div class="midia">
             <div class="midia-social">
-                <a target="_blank" href="https://www.instagram.com/dr3y_garage/"><img class="icon" src="../assets/icon_insta.png" alt=""> <span>@dr3y_garage</span></a>
+                <a target="_blank" href="https://www.instagram.com/dr3y_garage/"><img class="icon"
+                        src="../assets/icon_insta.png" alt=""> <span>@dr3y_garage</span></a>
             </div>
             <div class="back-to-top">
                 <button><a href="#">Voltar ao topo</a></button>
             </div>
         </div>
-    
-    </footer>    
+
+    </footer>
 </body>
+
 </html>
 
 <script>
@@ -193,16 +200,68 @@
     vt_acesso = [];
     vt_like = [];
 
+    function passar() {
+
+        if (vt_acesso.length <= 6) {
+            for (var i = Number(1); i <= vt_acesso.length; i++) {
+
+                console.log(vt_acesso)
+                if (i == 6) {
+                    alert('Parabéns você acessou todas as publicações')
+
+
+                } else if (i > 6) {
+                    break;
+                }
+            }
+        }
+
+
+    }
+
 
     function on_like() {
         vt_like.push(1)
         console.log(vt_like)
 
-        alert("Fico feliz que gostou! :)")
+        alert("Fico feliz que gostou! :)");
+
 
     }
 
-function close_card() {
+    function like() {
+        vt_like.push(1)
+        
+        alert("Fico feliz que gostou! :)");
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var vt_var     = (vt_like.length - 1) + 1;
+        var user_var   = sessionStorage.ID_USUARIO;
+        
+        // Enviando o valor da nova input
+        fetch("/usuarios/like", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                vtServer: vt_var,
+                userServer:user_var
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+    function close_card() {
         container_text.style.display = 'none'
     }
 
@@ -255,6 +314,8 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p><b>6) Estofamento</b></p>
 <p>Os bancos também precisam ser limpos e para isso use também um pano macio e levemente umedecido. No caso de bancos em couro, além disso, utilize um produto específico para manter a integridade e a durabilidade do material, mantendo sua hidratação. O mesmo deve ser feito no volante, alavanca e portas, se os mesmos forem revestidos com esse material.</p>
 <p>No mercado, os produtos desse tipo custam entre R$ 10 e R$ 50, geralmente. Nunca use silicone em bancos de couro, além de deixar o revestimento com aparência artificial, também o deixa tão liso que numa freada mais forte, o corpo irá escorregar sobre o assento. Quem tem moto sabe muito bem do que estamos falando.</p>`
+
+        passar()
     }
 
 
@@ -283,6 +344,8 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 
     <p><b>Onde fazer a troca de óleo</b></p>
 <p>&nbsp;&nbsp;Se o seu veículo já chegou à quilometragem recomendada para realizar a troca do óleo, a melhor forma de fazer a manutenção é contar com uma empresa especializada no assunto. Assim, você terá a garantia de que o serviço será bem realizado.</p>`
+
+        passar()
     }
     function pintura() {
 
@@ -326,6 +389,8 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p>&nbsp;&nbsp;Em relação à proteção da pintura, portanto, o enceramento é essencial seja para manter a estética do veículo, valorizando a cor e realçando o brilho, seja para garantir proteção, diminuindo eventuais danos causados por agentes em geral — como pequenos atritos ou fezes de bichos. Porém, como o exagero nunca é bom, é preciso ter cuidado para não pesar a mão no enceramento.</p>
 
 <p>&nbsp;&nbsp;Alguns processos de enceramento envolvem polimento. Nesse caso, geralmente uma politriz (máquina de polir) é usada, criando um abrasamento (pequeno desgaste) no verniz da tinta. Se isso for feito com muita frequência, camadas da tinta serão danificadas. Por isso, tenha moderação!</p>`
+
+        passar()
     }
     function combustivel() {
 
@@ -358,6 +423,8 @@ Pode-se utilizar também cera líquida para essa parte, mas nesse caso a aplica�
 <p>&nbsp;&nbsp;> Desconfie de postos que têm preços muito abaixo daqueles praticados na região. Isso pode indicar algo anormal;</p>
 
 <p>&nbsp;&nbsp;> Se suspeitar que o seu veículo foi abastecido com combustível adulterado, entre em contato com os Procons estaduais.</p>`
+
+        passar()
     }
     function pneu() {
 
@@ -384,6 +451,8 @@ Se não houve reposição dos pneus 10 anos após a data de fabricação, a Mich
 
 <b>Como verificar a data de fabricação</b></p>
 <p>&nbsp;&nbsp;Procure o número de identificação DOT no flanco do pneu.</p>`
+
+        passar()
     }
     function cinto() {
 
@@ -432,6 +501,8 @@ Se não houve reposição dos pneus 10 anos após a data de fabricação, a Mich
 <p>&nbsp;&nbsp;Além do mais, a utilização do item, também pode evitar acidente. O cinto retém o corpo do motorista junto ao assento, o que permite manter o controle do veículo. Com o corpo solto no banco, o condutor perde facilmente a condição de dirigir.</p>
 
 <p>&nbsp;&nbsp;Então, vale ressaltar que, apesar dos avanços tecnológicos, o cinto de segurança de três pontos inventado há 61 anos, continua sendo o equipamento que mais salva vidas. Use-o, sempre, independente da distância do seu destino.</p>`
+
+        passar()
     }
 
 </script>

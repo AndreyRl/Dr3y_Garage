@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +15,9 @@
     <script src="js/funcoes.js"></script>
     <title>Dr3y_Garage | Login</title>
 </head>
+
 <body>
-    
+
     <div class="full-screen-login">
 
         <div class="container-full">
@@ -25,16 +27,19 @@
                 <div class="cad">
                     <h2>Login</h2>
                 </div>
-                
+
                 <div class="box-ipt">
-                    
-                    <div class="cont-box"><i class="uil uil-envelope-alt icon"></i>|<input id="email_input" placeholder="Email" type="text" name="" id=""></div>
-                    <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="senha_input" placeholder="Senha" type="password" name="" id=""></div>
+
+                    <div class="cont-box"><i class="uil uil-envelope-alt icon"></i>|<input id="email_input"
+                            placeholder="Email" type="text" name="" id=""></div>
+                    <div class="cont-box"><i class="uil uil-padlock icon"></i>|<input id="senha_input"
+                            placeholder="Senha" type="password" name="" id=""></div>
                 </div>
-
-                    <span class="remenber">Lembre-se de mim <input type="checkbox" name="" id=""></span>
-
-                    <a href="#"><button onclick="entrar()" class="btn-login"><i class="uil uil-signin"></i>Login</button></a>
+                <label for="mostrarSenha">
+                    <span class="remenber">Mostrar senha <input onclick="mostrar()" type="checkbox" name="" id="mostrarSenha"></span>
+                </label>
+                <a href="#"><button onclick="entrar()" class="btn-login"><i
+                            class="uil uil-signin"></i>Login</button></a>
 
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/car-driving-7.gif" id="loading-gif">
@@ -63,9 +68,9 @@
                 <span>&nbsp;Entre com seu email e senha, para acessar sua conta!
                     Caso não tenha, não se preocupe. Registre-se agora mesmo.</span>
 
-                    <a href="cadastro.html"><button class="btn-cad-login">Cadastre-se</button></a>
+                <a href="cadastro.html"><button class="btn-cad-login">Cadastre-se</button></a>
 
-                    <div class="text-copy-login">Dr3y_Garage Copyright&copy; 2022</div>
+                <div class="text-copy-login">Dr3y_Garage Copyright&copy; 2022</div>
 
             </div>
 
@@ -74,9 +79,22 @@
     </div>
 
 </body>
+
 </html>
 
 <script>
+
+
+function mostrar() {
+    var senha = document.getElementById("senha_input");
+
+    if (senha.type == "password") {
+        senha.type = "text";
+    } else {
+        senha.type = "password";
+    }
+
+}
 
 
     function entrar() {
@@ -129,7 +147,7 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.id_usuario;
 
                     setTimeout(function () {
                         window.location = "./dashboard/home_dash.html";

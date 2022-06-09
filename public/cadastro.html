@@ -45,8 +45,10 @@
                 </div>
 
                 <a href="#"><button onclick="cadastrar()" class="btn-cadastrar">Cadastrar</button></a>
-
-                <a href="index.html"><button class="btn-home"><i class="uil uil-home"></i>Home</button></a>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="assets/car-driving-7.gif" id="loading-gif">
+                </div>
+                <a href="index.html"><button id="btn_home" class="btn-home"><i class="uil uil-home"></i>Home</button></a>
 
                 <div class="alerta_erro">
                     <div class="card_erro" id="cardErro">
@@ -54,9 +56,6 @@
                     </div>
                 </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="../public/assets/circle-loading.gif" id="loading-gif">
-                </div>
 
                 <div id="div_erros_login">
 
@@ -71,7 +70,11 @@
 </html>
 
 <script>
+
     function cadastrar() {
+
+        
+
         aguardar();
 
         //Recupere o valor da nova input pelo nome do id
@@ -90,6 +93,7 @@
         }
         else {
             setInterval(sumirMensagem, 5000)
+            btn_home.style.display = "none"
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
@@ -100,6 +104,7 @@
         }
         else {
             setInterval(sumirMensagem, 5000)
+            btn_home.style.display = "none"
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
@@ -110,6 +115,7 @@
         }
         else {
             setInterval(sumirMensagem, 5000)
+            btn_home.style.display = "none"
         }
 
         // Enviando o valor da nova input

@@ -11,6 +11,7 @@ senha VARCHAR (45)
 
 CREATE TABLE curtida (
 id_curtida INT PRIMARY KEY AUTO_INCREMENT,
+valor INT,
 dt_curtida DATETIME DEFAULT CURRENT_TIMESTAMP,
 fk_usuario INT,
 FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario)

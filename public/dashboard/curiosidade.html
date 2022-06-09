@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body onload="usuario()">
 
     <div class="container-text fade" id="container_text">
         <div class="div-btn">
@@ -25,7 +25,7 @@
         </div>
         <div class="box-text" id="box_int">
 
-            <h2 id="title_text"></h2> <button onclick="on_like()" id="like_btn" class="like"><img class="btn-like"
+            <h2 id="title_text"></h2> <button onclick="like()" id="like_btn" class="like"><img class="btn-like"
                     src="image/gostar.png" alt="">Like</button>
             <span id="span_text"></span>
         </div>
@@ -47,7 +47,7 @@
                 <li>|</li>
                 <a href="login.html">
                     <li>
-                        <div class="box-login">Sair</div>
+                        <a href="../login.html"><div class="box-login">Sair</div></a>
                     </li>
                 </a>
         </div>
@@ -208,27 +208,51 @@
         if (vt_acesso.length <= 6) {
             for (var i = Number(1); i <= vt_acesso.length; i++) {
 
-console.log(vt_acesso)
-if (i == 6) {
-    alert('Parabéns você acessou todas as publicações')
+                console.log(vt_acesso)
+                if (i == 6) {
+                    alert('Parabéns você acessou todas as publicações')
 
-    
-} else if (i > 6) {
-    break;
-}
-}
+
+                } else if (i > 6) {
+                    break;
+                }
+            }
         }
 
-        
+
     }
 
 
-    function on_like() {
-        vt_like.push(1)
-        console.log(vt_like)
+    function like() {
+        vt_like.push("Gostou da página")
+        
+        alert("Fico feliz que gostou! :)");
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var vt_var     = (vt_like.length - 1);
+        var user_var   = sessionStorage.ID_USUARIO;
+        
+        // Enviando o valor da nova input
+        fetch("/usuarios/like", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                vtServer: vt_var,
+                userServer:user_var
+            })
+        }).then(function (resposta) {
 
-        alert("Fico feliz que gostou! :)")
+            console.log("resposta: ", resposta);
 
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
     }
 
     function close_card() {

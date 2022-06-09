@@ -17,8 +17,7 @@
 
 </head>
 
-<!-- <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;"> -->
-<body onload="usuario(), postagem()"  style="background-color: #161618;">
+<body onload="usuario()">
 
     <header class="header-bar" id="top-btn">
 
@@ -34,7 +33,7 @@
                 <li>|</li>
                 <a href="login.html">
                     <li>
-                        <div class="box-login">Sair</div>
+                        <a href="../login.html"><div class="box-login">Sair</div></a>
                     </li>
                 </a>
         </div>
@@ -56,12 +55,12 @@
                 <div  class="result"><b id="cont_usuario"></b></div>
             </div>
             <div class="access h2-mt">
-                <h2>Quantidade de acessos as publicações:</h2>
-                <div class="result"><b id="cont_postagem">0</b></div>
+                <h2>Quantidade de publicações:</h2>
+                <div class="result"><b id="cont_postagem"></b></div>
             </div>
             <div class="likes h2-mt">
                 <h2>Quantidade de likes nas publicações:</h2>
-                <div class="result">0</div>
+                <div class="result"><b id="cont_curtida"></b></div>
             </div>
         </div>
 
@@ -124,45 +123,18 @@ function usuario() {
             var conteudo = document.getElementById("cont_usuario")
             var usuario_cadastrados = cont[0].c;
             conteudo.innerHTML = `${usuario_cadastrados}`;
-          })
 
-        } else {
-          console.log("Houve um erro ao tentar realizar a contagem!");
-
-          resposta.text().then((texto) => {
-            console.error(texto);
-            finalizarAguardar(texto);
-          });
-        }
-      })
-      .catch(function (erro) {
-        console.log(erro);
-      });
-
-    return false;
-  }
-
-  function postagem() {
-    fetch("usuarios/postagem", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-      .then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!");
-
-        if (resposta.ok) {
-          console.log(resposta);
-
-          /parametrizar as respostas do console/
-          console.log("Deu certo a contagem !!", resposta)
-          resposta.json().then(cont => {
             console.log(cont);
-            console.log(JSON.stringify(cont[0].c));
+            console.log(JSON.stringify(cont[0].acesso));
             var conteudo = document.getElementById("cont_postagem")
-            var postagem_cadastrados = cont[0].c;
+            var postagem_cadastrados = cont[0].acesso;
             conteudo.innerHTML = `${postagem_cadastrados}`;
+
+            console.log(cont);
+            console.log(JSON.stringify(cont[0].curtida));
+            var conteudo = document.getElementById("cont_curtida")
+            var curtida_cadastrados = cont[0].curtida;
+            conteudo.innerHTML = `${curtida_cadastrados}`;
           })
 
         } else {
@@ -174,11 +146,51 @@ function usuario() {
           });
         }
       })
+
       .catch(function (erro) {
         console.log(erro);
       });
 
     return false;
   }
+
+  // function postagem() {
+  //   fetch("avisos/postagem", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     }
+  //   })
+  //     .then(function (resposta) {
+  //       console.log("ESTOU NO THEN DO entrar()!");
+
+  //       if (resposta.ok) {
+  //         console.log(resposta);
+
+  //         /parametrizar as respostas do console/
+  //         console.log("Deu certo a contagem !!", resposta)
+  //         resposta.json().then(cont => {
+  //           console.log(cont);
+  //           console.log(JSON.stringify(cont[0].c));
+  //           var conteudo = document.getElementById("cont_postagem")
+  //           var postagem_cadastrados = cont[0].c;
+  //           conteudo.innerHTML = `${postagem_cadastrados}`;
+  //         })
+
+  //       } else {
+  //         console.log("Houve um erro ao tentar realizar a contagem!");
+
+  //         resposta.text().then((texto) => {
+  //           console.error(texto);
+  //           finalizarAguardar(texto);
+  //         });
+  //       }
+  //     })
+  //     .catch(function (erro) {
+  //       console.log(erro);
+  //     });
+
+  //   return false;
+  // }
 
 </script>

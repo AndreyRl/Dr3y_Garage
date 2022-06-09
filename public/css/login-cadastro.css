@@ -15,6 +15,7 @@ body {
     align-items: center;
     background: linear-gradient(30deg, #000000 50%, #bf1922 99%);
 }
+
 .container-full {
     display: flex;
     margin-top: 4vh;
@@ -233,8 +234,8 @@ body {
     border-radius: 5px;
     border: #bf1922 2px solid;
     padding: 5px;
-    margin-left: 20%;
-    margin-bottom: 1vh;
+    margin-left: 25%;
+    margin-top: -5vh;
     box-shadow: 0 1px 5px #666667;
 }
 
@@ -309,7 +310,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
-    width: 10vw;
+    width: 15vw;
     height: 6vh;
     cursor: pointer;
     margin-left: 8vw;
@@ -389,12 +390,14 @@ body {
 }
 
 .loading-div {
-    width: 50px;
-    margin: auto;
+    align-items: center;
+    width: 60px;
+    margin: 0px 170px;
     display: none;
+    justify-content: center;
 }
   
   .loading-div img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
